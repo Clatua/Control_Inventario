@@ -79,9 +79,9 @@ btnBuscar.addEventListener('click', () => {
   let buscado = grupo2c.buscar(id); //alumno
   let res = document.getElementById('resultados');
   if (buscado == null)
-    res.innerHTML += "<h3>No se encontro en la busqueda</h3>"
+    res.innerHTML = "<h3>No se encontro en la busqueda</h3>"
   else {
-    res.innerHTML += "<h3>Si se encontro</h3>" + buscado.infoHtml();
+    res.innerHTML = "<h3>Si se encontro</h3>" + buscado.infoHtml();
     document.getElementById('txtId').value = buscado.id;
     document.getElementById('txtCantidad').value = buscado.cantidad;
   }
@@ -95,9 +95,9 @@ let btnEliminar=document.getElementById("btnEliminar");
     let res = document.getElementById('resultados');
     let eliminado=grupo2c.eliminar(id);
     if(eliminado==false)
-      res.innerHTML+= "<h3>No se elimino ningun producto</h3>"
+      res.innerHTML= "<h3>No se elimino ningun producto</h3>"
     else
-      res.innerHTML+= "<h3>Se ha eliminado el producto</h3>"
+      res.innerHTML= "<h3>Se ha eliminado el producto</h3>"
     
 
   })
@@ -106,5 +106,5 @@ let btnEliminar=document.getElementById("btnEliminar");
 let btnListar = document.getElementById('btnListar');
 btnListar.addEventListener('click', () => {
   let res = document.getElementById('resultados');
-  res.innerHTML += "<h1>LISTADO</h1>" + grupo2c.listar();
+  res.innerHTML = "<h1>LISTADO</h1>" + grupo2c.listar();
 })
